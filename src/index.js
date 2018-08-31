@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EventsIndex from './components/EventsIndex';
+import EventsIndex from './containers/EventsIndex';
 import registerServiceWorker from './registerServiceWorker';
 
 import {createStore} from 'redux'
