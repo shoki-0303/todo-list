@@ -1,4 +1,10 @@
 import {connect} from 'react-redux'
 import EventsIndex from '../components/EventsIndex'
 
-export default connect(null, null)(EventsIndex)
+const mapStateToProps = state => {
+  return {
+    events: state.events
+  }
+}
+
+export default connect(mapStateToProps, null)(EventsIndex)
