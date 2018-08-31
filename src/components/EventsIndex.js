@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class EventsIndex extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class EventsIndex extends React.Component {
       return (
         <tr key={index}>
           <td>{event.id}</td>
-          <td>{event.title}</td>
+          <td><Link to={`/events/${event.id}`}>{event.title}</Link></td>
           <td>{event.body}</td>
         </tr>
         );
