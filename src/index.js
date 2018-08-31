@@ -9,11 +9,14 @@ import registerServiceWorker from './registerServiceWorker';
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
-import {createStore} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
+import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 import rootReducer from './reducers'
 
-const store = createStore(rootReducer)
+const middleWares = [thunk]
+
+const store = createStore(rootReducer, applyMiddleware(...middleWares))
 
 ReactDOM.render(
   <Provider store={store}>
