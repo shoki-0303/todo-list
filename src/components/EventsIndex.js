@@ -6,6 +6,17 @@ class EventsIndex extends React.Component {
   }
 
   render() {
+    const {events} = this.props
+    const event = events.map((event, index)=>{
+      return (
+        <tr key={index}>
+          <td>{event.id}</td>
+          <td>{event.title}</td>
+          <td>{event.body}</td>
+        </tr>
+        );
+    })
+
     return(
       <table>
         <thead>
@@ -16,11 +27,7 @@ class EventsIndex extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>title1</td>
-            <td>body1</td>
-          </tr>
+          {event}
         </tbody>
       </table>
       );
