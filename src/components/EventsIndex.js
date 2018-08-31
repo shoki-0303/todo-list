@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props)
+    this.props.getEvents()
   }
 
   render() {

@@ -9,7 +9,7 @@ const initialEvents = [
 export const events = (events = initialEvents, action) => {
   switch(action.type) {
     case "READ_EVENTS":
-      return events;
+      return action.events;
     default:
       return events;
   }
