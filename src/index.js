@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import EventsIndex from './containers/EventsIndex';
 import EventsShow from './containers/EventsShow';
+import EventsNew from './containers/EventsNew';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={EventsIndex} />
         <Route exact path="/events" component={EventsIndex} />
+        <Route exact path="/events/new" component={EventsNew} />
         <Route exact path="/events/:id" component={EventsShow} />
       </Switch>
     </BrowserRouter>
