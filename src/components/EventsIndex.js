@@ -20,18 +20,21 @@ class EventsIndex extends React.Component {
     })
 
     return(
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>title</th>
-            <th>body</th>
-          </tr>
-        </thead>
-        <tbody>
-          {event}
-        </tbody>
-      </table>
+      <React.Fragment>
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>body</th>
+            </tr>
+          </thead>
+          <tbody>
+            {event}
+          </tbody>
+        </table>
+        <Link to="/events/new">New Event</Link>
+      </React.Fragment>
       );
   }
 }
