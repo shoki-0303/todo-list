@@ -12,5 +12,14 @@ export const getEvents = () => {
     })
   }
 }
+export const postEvent = (values) => {
+  return dispatch => {
+    const response = axios.post(`${ROOT_URL}/events/${QUERY_STRIMG}`, values)
+    response.then((res)=>{
+      const event = res.data
+      dispatch({type: "CREATE_EVENT", event})
+    })
+  }
+}
 
 

@@ -18,6 +18,9 @@ class EventsNew extends React.Component {
     e.preventDefault();
     const title = this.state.title
     const body = this.state.body
+    const values = {title: title, body: body}
+    this.props.postEvent(values)
+    this.props.history.push("/")
   }
 
   render() {
